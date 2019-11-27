@@ -13,11 +13,13 @@ expose:
   - --v
   - 4
   config:
-    domain: ci.cloudsmart.io
+    domain: staging.ci.cloudsmart.io
     exposer: Ingress
-    http: "true"
-    tlsacme: "false"
+    http: "false"
+    tlsSecretName: tls-staging.ci.cloudsmart.io-p
+    tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
+  production: true
 jenkins:
   Servers:
     Global: {}
