@@ -13,10 +13,10 @@ expose:
   - --v
   - 4
   config:
-    domain: staging.ci.cloudsmart.io
+    domain: staging.cloudsmart.io
     exposer: Ingress
     http: "false"
-    tlsSecretName: tls-staging.ci.cloudsmart.io-p
+    tlsSecretName: tls-staging.cloudsmart.io-p
     tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
