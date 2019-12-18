@@ -13,3 +13,6 @@ dependencies:
 - name: google-pubsub-emulator
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.12
+- name: userservice
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.7
