@@ -15,9 +15,9 @@ expose:
   config:
     domain: ci.cloudsmart.io
     exposer: Ingress
-    http: "true"
-    tlsSecretName: tls-staging.cloudsmart.io-p
-    tlsacme: "false"
+    http: "false"
+    tlsSecretName: tls-ci.cloudsmart.io-p
+    tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
 jenkins:
