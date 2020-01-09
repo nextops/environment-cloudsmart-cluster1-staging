@@ -65,7 +65,7 @@ expose:
     domain: ci.cloudsmart.io
     exposer: Ingress
     http: "false"
-    tlsSecretName: tls-ci-cloudsmart-io-p
+    tlsSecretName: tls-ci.cloudsmart.io-p
     tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
