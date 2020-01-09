@@ -66,7 +66,7 @@ dex:
     staticClients:
       - id: dex-client-poc
         redirectURIs:
-          - 'http://dex-client-poc.jx-cloudsmartio-dex-client-poc-pr-2.ci.cloudsmart.io/callback'
+          - 'http://dex-client-poc-jx-staging.ci.cloudsmart.io/callback'
         name: 'Dex Client POC'
         secret: vault:cloudsmart-cluster1/dex-client-poc:secret
 
