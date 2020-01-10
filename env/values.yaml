@@ -40,11 +40,14 @@ dex:
       kubernetes.io/ingress.class: nginx
     enabled: true
     hosts:
-    - dex-staging.ci.cloudsmart.io
-    - comments-service-jx-staging.ci.cloudsmart.io
-    - dex-client-poc.jx-cloudsmartio-dex-client-poc-pr-2.ci.cloudsmart.io
+      - dex-staging.ci.cloudsmart.io
+      - comments-service-jx-staging.ci.cloudsmart.io
+      - dex-client-poc-jx-staging.ci.cloudsmart.io   
     path: /dex
-    tls: []
+    tls:
+      - secretName: tls-ci-cloudsmart-io-p
+        hosts:
+          - dex.example.com
   ports:
     web:
       containerPort: 5556
