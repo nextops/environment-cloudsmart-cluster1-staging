@@ -11,11 +11,11 @@ dex:
     - config:
         clientID: vault:cloudsmart-cluster1/github-oauth:clientID
         clientSecret: vault:cloudsmart-cluster1/github-oauth:clientSecret
-        redirectURI: http://dex-staging.ci.cloudsmart.io/dex/callback
+        redirectURI: https://dex-client-poc-jx-staging.ci.cloudsmart.io/dex/callback
       id: github
       name: github
       type: github
-    issuer: http://dex-staging.ci.cloudsmart.io/dex
+    issuer: https://dex-client-poc-jx-staging.ci.cloudsmart.io/dex
     logger:
       level: debug
     oauth2:
@@ -25,7 +25,7 @@ dex:
     - id: dex-client-poc
       name: Dex Client POC
       redirectURIs:
-      - http://dex-client-poc-jx-staging.ci.cloudsmart.io/callback
+      - https://dex-client-poc-jx-staging.ci.cloudsmart.io/callback
       secret: vault:cloudsmart-cluster1/dex-client-poc:secret
     storage:
       config:
