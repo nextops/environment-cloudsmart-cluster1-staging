@@ -47,7 +47,9 @@ dex:
     tls:
       - secretName: tls-ci-cloudsmart-io-p
         hosts:
-          - dex.example.com
+          - dex-staging.ci.cloudsmart.io
+          - comments-service-jx-staging.ci.cloudsmart.io
+          - dex-client-poc-jx-staging.ci.cloudsmart.io 
   ports:
     web:
       containerPort: 5556
