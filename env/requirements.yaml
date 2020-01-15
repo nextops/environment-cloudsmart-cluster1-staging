@@ -1,7 +1,14 @@
 dependencies:
+- name: agile-project-manager
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.1
 - name: comments-service
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.24
+- alias: dex
+  name: dex
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 2.6.1
 - name: dex-client-poc
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.3
@@ -16,7 +23,3 @@ dependencies:
 - name: userservice
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.8
-- alias: dex
-  name: dex
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 2.6.1
