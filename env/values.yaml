@@ -78,3 +78,5 @@ jenkins:
   Servers:
     Global: {}
 prow: {}
+apm-mongodb:
+  usePassword: false
