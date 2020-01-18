@@ -80,3 +80,4 @@ jenkins:
 prow: {}
 apm-mongodb:
   usePassword: false
+  mongodbSystemLogVerbosity: 1
