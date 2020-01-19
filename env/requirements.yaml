@@ -2,6 +2,9 @@ dependencies:
 - name: agile-project-manager
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.8
+- name: application-root
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.3
 - name: comments-service
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.25
@@ -12,17 +15,14 @@ dependencies:
 - name: dex-client-poc
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.3
-- alias: expose
-  name: exposecontroller
-  repository: http://chartmuseum.jenkins-x.io
-  version: 2.3.114
 - alias: cleanup
   name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
   version: 2.3.114
-- name: userservice
-  repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.12
+- alias: expose
+  name: exposecontroller
+  repository: http://chartmuseum.jenkins-x.io
+  version: 2.3.114
 - alias: apm-mongodb
   name: mongodb
   repository: https://kubernetes-charts.storage.googleapis.com
@@ -35,3 +35,6 @@ dependencies:
   name: mongodb
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 7.5.0
+- name: userservice
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.12
