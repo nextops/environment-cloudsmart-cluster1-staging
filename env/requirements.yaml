@@ -27,3 +27,12 @@ dependencies:
   name: mongodb
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 7.5.0
+- alias: comments-service-mongodb
+  name: mongodb
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 7.5.0
+- alias: userservice-mongodb
+  name: mongodb
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 7.5.0
+  

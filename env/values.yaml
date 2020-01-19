@@ -81,3 +81,9 @@ prow: {}
 apm-mongodb:
   usePassword: false
   mongodbSystemLogVerbosity: 1
+comments-service-mongodb:
+  usePassword: false
+  mongodbSystemLogVerbosity: 1
+userservice-mongodb:
+  usePassword: false
+  mongodbSystemLogVerbosity: 1
