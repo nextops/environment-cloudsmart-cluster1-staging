@@ -1,10 +1,16 @@
 PipelineSecrets: {}
+apm-mongodb:
+  mongodbSystemLogVerbosity: 1
+  usePassword: false
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
   Args:
   - --cleanup
+comments-service-mongodb:
+  mongodbSystemLogVerbosity: 1
+  usePassword: false
 dex:
   config:
     connectors:
@@ -78,12 +84,6 @@ jenkins:
   Servers:
     Global: {}
 prow: {}
-apm-mongodb:
-  usePassword: false
-  mongodbSystemLogVerbosity: 1
-comments-service-mongodb:
-  usePassword: false
-  mongodbSystemLogVerbosity: 1
 userservice-mongodb:
-  usePassword: false
   mongodbSystemLogVerbosity: 1
+  usePassword: false
