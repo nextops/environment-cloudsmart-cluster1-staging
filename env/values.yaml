@@ -2,9 +2,6 @@ PipelineSecrets: {}
 apm-mongodb:
   mongodbSystemLogVerbosity: 1
   usePassword: false
-notifications-service-mongodb:
-  usePassword: false
-  mongodbSystemLogVerbosity: 1
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
@@ -86,6 +83,9 @@ expose:
 jenkins:
   Servers:
     Global: {}
+notifications-service-mongodb:
+  mongodbSystemLogVerbosity: 1
+  usePassword: false
 prow: {}
 userservice-mongodb:
   mongodbSystemLogVerbosity: 1
