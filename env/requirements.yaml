@@ -2,6 +2,9 @@ dependencies:
 - name: agile-project-manager
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.14
+- name: agile-project-manager-composite
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.3
 - name: agile-project-manager-frontend
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.2
@@ -29,10 +32,6 @@ dependencies:
 - name: gitprovider-sync-agent
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.5
-- alias: comments-service-mongodb
-  name: mongodb
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 7.5.0
 - alias: userservice-mongodb
   name: mongodb
   repository: https://kubernetes-charts.storage.googleapis.com
@@ -42,6 +41,10 @@ dependencies:
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 7.5.0
 - alias: apm-mongodb
+  name: mongodb
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 7.5.0
+- alias: comments-service-mongodb
   name: mongodb
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 7.5.0
