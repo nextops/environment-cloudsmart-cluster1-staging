@@ -50,7 +50,7 @@ dependencies:
   version: 7.5.0
 - name: notifications-service
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.2
+  version: 0.0.3
 - name: userservice
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.18
