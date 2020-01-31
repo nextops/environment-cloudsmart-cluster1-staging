@@ -11,6 +11,9 @@ dependencies:
 - name: application-root
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.5
+- name: authservice
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.5
 - name: comments-service
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.28
@@ -32,10 +35,6 @@ dependencies:
 - name: gitprovider-sync-agent
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.5
-- alias: userservice-mongodb
-  name: mongodb
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 7.5.0
 - alias: notifications-service-mongodb
   name: mongodb
   repository: https://kubernetes-charts.storage.googleapis.com
@@ -45,6 +44,10 @@ dependencies:
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 7.5.0
 - alias: comments-service-mongodb
+  name: mongodb
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 7.5.0
+- alias: userservice-mongodb
   name: mongodb
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 7.5.0
