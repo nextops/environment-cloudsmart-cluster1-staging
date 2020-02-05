@@ -18,6 +18,13 @@ dex:
         clientID: vault:cloudsmart-cluster1/github-oauth:clientID
         clientSecret: vault:cloudsmart-cluster1/github-oauth:clientSecret
         redirectURI: https://dex-client-poc-jx-staging.ci.cloudsmart.io/dex/callback
+        scopes:
+          - openid
+          - email
+          - profile
+          - groups
+          - federated:id
+        getUserInfo: true
       id: github
       name: github
       type: github
@@ -25,14 +32,14 @@ dex:
     logger:
       level: debug
     oauth2:
-      alwaysShowLoginScreen: true
+      alwaysShowLoginScreen: false
       skipApprovalScreen: true
     staticClients:
-    - id: dex-client-poc
+    - id: authservice
       name: Dex Client POC
       redirectURIs:
-      - https://dex-client-poc-jx-staging.ci.cloudsmart.io/callback
-      secret: vault:cloudsmart-cluster1/dex-client-poc:secret
+      - https://authservice.jx-staging.ci.cloudsmart.io/callback
+      secret: vault:cloudsmart-cluster1/authservice:secret
     storage:
       config:
         inCluster: true
@@ -46,15 +53,11 @@ dex:
       kubernetes.io/ingress.class: nginx
     enabled: true
     hosts:
-    - dex-staging.ci.cloudsmart.io
-    - comments-service-jx-staging.ci.cloudsmart.io
-    - dex-client-poc-jx-staging.ci.cloudsmart.io
+    - authservice-jx-staging.ci.cloudsmart.io
     path: /dex
     tls:
     - hosts:
-      - dex-staging.ci.cloudsmart.io
-      - comments-service-jx-staging.ci.cloudsmart.io
-      - dex-client-poc-jx-staging.ci.cloudsmart.io
+      - authservice-jx-staging.ci.cloudsmart.io
       secretName: tls-ci-cloudsmart-io-p
   ports:
     web:
