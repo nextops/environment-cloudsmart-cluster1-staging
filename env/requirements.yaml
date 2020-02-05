@@ -21,9 +21,6 @@ dependencies:
   name: dex
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 2.6.1
-- name: dex-client-poc
-  repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.4
 - alias: cleanup
   name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
