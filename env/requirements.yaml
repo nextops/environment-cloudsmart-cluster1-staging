@@ -34,7 +34,7 @@ dependencies:
   version: 2.3.114
 - name: gitprovider-sync-agent
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.6
+  version: 0.0.7
 - alias: notifications-service-mongodb
   name: mongodb
   repository: https://kubernetes-charts.storage.googleapis.com
