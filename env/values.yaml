@@ -17,14 +17,14 @@ dex:
     - config:
         clientID: vault:cloudsmart-cluster1/github-oauth:clientID
         clientSecret: vault:cloudsmart-cluster1/github-oauth:clientSecret
+        getUserInfo: true
         redirectURI: https://dex-client-poc-jx-staging.ci.cloudsmart.io/dex/callback
         scopes:
-          - openid
-          - email
-          - profile
-          - groups
-          - federated:id
-        getUserInfo: true
+        - openid
+        - email
+        - profile
+        - groups
+        - federated:id
       id: github
       name: github
       type: github
