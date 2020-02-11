@@ -20,7 +20,7 @@ dependencies:
 - alias: dex
   name: dex
   repository: https://kubernetes-charts.storage.googleapis.com
-  version: 2.6.1
+  version: 2.6.2
 - alias: cleanup
   name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
