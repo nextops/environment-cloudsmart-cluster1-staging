@@ -55,10 +55,10 @@ dex:
     hosts:
     - authservice-jx-staging.ci.cloudsmart.io
     path: /dex
-    tls:
-    - hosts:
-      - authservice-jx-staging.ci.cloudsmart.io
-      secretName: tls-ci-cloudsmart-io-p
+    tls: []
+    # - hosts:
+    #   - authservice-jx-staging.ci.cloudsmart.io
+    #   secretName: tls-ci-cloudsmart-io-p
   ports:
     web:
       containerPort: 5556
