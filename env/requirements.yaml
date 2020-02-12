@@ -10,7 +10,7 @@ dependencies:
   version: 0.0.12
 - name: application-root
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.5
+  version: 0.0.6
 - name: authservice
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.8
