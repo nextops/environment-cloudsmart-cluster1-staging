@@ -93,3 +93,30 @@ prow: {}
 userservice-mongodb:
   mongodbSystemLogVerbosity: 1
   usePassword: false
+application-root:
+  ingress:
+    paths:
+      - path: /()(assets/apm.*)
+        backend:
+          serviceName: agile-project-manager-frontend
+          servicePort: 80
+      - path: /()(dex.*)
+        backend:
+          serviceName: jx-dex
+          servicePort: 32000
+      - path: /(api)/(projects|issues|pulls|sprints.*)
+        backend:
+          serviceName: agile-project-manager
+          servicePort: 80
+      - path: /(api)/(auth.*)
+        backend:
+          serviceName: authservice
+          servicePort: 80
+      - path: /(api)/(user.*)
+        backend:
+          serviceName: userservice
+          servicePort: 80
+      - path: /()(.*)
+        backend:
+          serviceName: application-root
+          servicePort: 80
