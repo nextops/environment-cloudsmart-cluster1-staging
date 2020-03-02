@@ -18,7 +18,7 @@ dex:
         clientID: vault:cloudsmart-cluster1/github-oauth:clientID
         clientSecret: vault:cloudsmart-cluster1/github-oauth:clientSecret
         getUserInfo: true
-        redirectURI: https://dex-client-poc-jx-staging.ci.cloudsmart.io/dex/callback
+        redirectURI: http://staging.ci.cloudsmart.io/dex/callback
         scopes:
         - openid
         - email
@@ -28,7 +28,7 @@ dex:
       id: github
       name: github
       type: github
-    issuer: https://authservice-jx-staging.ci.cloudsmart.io/dex
+    issuer: http://staging.ci.cloudsmart.io/dex
     logger:
       level: debug
     oauth2:
@@ -38,7 +38,7 @@ dex:
     - id: authservice
       name: Dex Client POC
       redirectURIs:
-      - https://authservice-jx-staging.ci.cloudsmart.io/callback
+      - http://staging.ci.cloudsmart.io/callback
       secret: vault:cloudsmart-cluster1/authservice:secret
     storage:
       config:
