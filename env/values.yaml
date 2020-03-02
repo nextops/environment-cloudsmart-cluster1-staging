@@ -68,21 +68,6 @@ dex:
   service:
     annotations: {}
     type: ClusterIP
-expose:
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-  Args:
-  - --v
-  - 4
-  config:
-    domain: ci.cloudsmart.io
-    exposer: Ingress
-    http: "false"
-    tlsSecretName: tls-ci-cloudsmart-io-p
-    tlsacme: "true"
-    urltemplate: '{{.Namespace}}.{{.Domain}}'
-  production: true
 jenkins:
   Servers:
     Global: {}
@@ -93,3 +78,46 @@ prow: {}
 userservice-mongodb:
   mongodbSystemLogVerbosity: 1
   usePassword: false
+application-root:
+  ingress:
+    # enabled: true
+    ## Add custom labels
+  #  labels:
+  #    foo: bar
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: 'false'
+    ## If you plan to use TLS backend with enableInsecureLogin set to false
+    ## (default), you need to uncomment the below.
+    ## If you use ingress-nginx < 0.21.0
+    #   nginx.ingress.kubernetes.io/secure-backends: "true"
+    ## if you use ingress-nginx >= 0.21.0
+    #   nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+
+    ## Ingress paths
+    ##
+    paths:
+      - path: /()(assets/apm.*)
+        backend:
+          serviceName: agile-project-manager-frontend
+          servicePort: 80
+      - path: /()(dex.*)
+        backend:
+          serviceName: jx-dex
+          servicePort: 32000
+      - path: /(api)/(projects|issues|pulls|sprints.*)
+        backend:
+          serviceName: agile-project-manager
+          servicePort: 80
+      - path: /(api)/(auth.*)
+        backend:
+          serviceName: authservice
+          servicePort: 80
+      - path: /(api)/(user.*)
+        backend:
+          serviceName: userservice
+          servicePort: 80
+      - path: /()(.*)
+        backend:
+          serviceName: application-root
+          servicePort: 80
