@@ -39,7 +39,7 @@ dex:
     enablePasswordDB: false
     staticClients:
     - id: authservice
-      name: Dex Client POC
+      name: "Dex Client POC"
       redirectURIs:
       - http://staging.ci.cloudsmart.io/auth/callback
       secret: vault:cloudsmart-cluster1/authservice:secret
