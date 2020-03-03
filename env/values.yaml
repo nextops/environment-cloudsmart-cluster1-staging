@@ -139,4 +139,4 @@ gitprovider-sync-agent:
     webhook_secret: "vault:cloudsmart-cluster1/gitprovider-sync-agent:webhook_secret"
   envFrom:
     - secretRef:
-        name: gitprovider-sync-agent-secrets
+        name: secret
