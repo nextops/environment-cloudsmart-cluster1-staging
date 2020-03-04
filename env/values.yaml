@@ -37,6 +37,12 @@ dex:
       alwaysShowLoginScreen: false
       skipApprovalScreen: true
     enablePasswordDB: false
+    staticClients:
+    - id: authservice
+      name: "Auth Service"
+      redirectURIs:
+      - "http://staging.ci.cloudsmart.io/auth/callback"
+      secret: "vault:cloudsmart-cluster1/authservice:secret"
     storage:
       config:
         inCluster: true
@@ -102,7 +108,19 @@ application-root:
         backend:
           serviceName: jx-dex
           servicePort: 32000
-      - path: /(api)/(projects|issues|pulls|sprints.*)
+      - path: /(api)/(projects.*)
+        backend:
+          serviceName: agile-project-manager
+          servicePort: 80
+      - path: /(api)/(issues.*)
+        backend:
+          serviceName: agile-project-manager
+          servicePort: 80
+      - path: /(api)/(pulls.*)
+        backend:
+          serviceName: agile-project-manager
+          servicePort: 80
+      - path: /(api)/(sprints.*)
         backend:
           serviceName: agile-project-manager
           servicePort: 80
