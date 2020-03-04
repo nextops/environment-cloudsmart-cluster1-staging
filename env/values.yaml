@@ -153,4 +153,4 @@ gitprovider-sync-agent:
       vault:cloudsmart-cluster1/gitprovider-sync-agent:private_key
   envFrom:
     - secretRef:
-        name: secret
+        name: gitprovider-sync-agent-secrets
