@@ -121,7 +121,8 @@ application-root:
 authservice:
   secret:
     secret: "vault:cloudsmart-cluster1/authservice:secret"
-    private_key: "vault:cloudsmart-cluster1/authservice:private_key"
+    private_key: |
+      vault:cloudsmart-cluster1/authservice:private_key
   envFrom:
     - secretRef:
         name: secret
@@ -129,8 +130,9 @@ gitprovider-sync-agent:
   secret:
     access_token: "vault:cloudsmart-cluster1/gitprovider-sync-agent:access_token"
     github_client_secret: "vault:cloudsmart-cluster1/gitprovider-sync-agent:github_client_secret"
-    private_key: "vault:cloudsmart-cluster1/gitprovider-sync-agent:private_key"
     webhook_secret: "vault:cloudsmart-cluster1/gitprovider-sync-agent:webhook_secret"
+    private_key: |
+      vault:cloudsmart-cluster1/gitprovider-sync-agent:private_key
   envFrom:
     - secretRef:
         name: secret
