@@ -39,7 +39,7 @@ dex:
     enablePasswordDB: false
     staticClients:
     - id: authservice
-      name: "Auth Service"
+      name: "Dex Client POC"
       redirectURIs:
       - "http://staging.ci.cloudsmart.io/auth/callback"
       secret: "vault:cloudsmart-cluster1/authservice:secret"
@@ -108,7 +108,19 @@ application-root:
         backend:
           serviceName: jx-dex
           servicePort: 32000
-      - path: /(api)/(projects|issues|pulls|sprints.*)
+      - path: /(api)/(projects.*)
+        backend:
+          serviceName: agile-project-manager
+          servicePort: 80
+      - path: /(api)/(issues.*)
+        backend:
+          serviceName: agile-project-manager
+          servicePort: 80
+      - path: /(api)/(pulls.*)
+        backend:
+          serviceName: agile-project-manager
+          servicePort: 80
+      - path: /(api)/(sprints.*)
         backend:
           serviceName: agile-project-manager
           servicePort: 80
