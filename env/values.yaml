@@ -126,16 +126,6 @@ expose:
     tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
-gitprovider-sync-agent:
-  envFrom:
-  - secretRef:
-      name: gitprovider-sync-agent-secrets
-  secret:
-    access_token: vault:cloudsmart-cluster1/gitprovider-sync-agent:access_token
-    github_client_secret: vault:cloudsmart-cluster1/gitprovider-sync-agent:github_client_secret
-    private_key: |
-      vault:cloudsmart-cluster1/gitprovider-sync-agent:private_key
-    webhook_secret: vault:cloudsmart-cluster1/gitprovider-sync-agent:webhook_secret
 jenkins:
   Servers:
     Global: {}
