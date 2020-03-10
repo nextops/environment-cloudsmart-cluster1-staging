@@ -45,14 +45,6 @@ application-root:
         serviceName: application-root
         servicePort: 80
       path: /()(.*)
-authservice:
-  envFrom:
-  - secretRef:
-      name: secret
-  secret:
-    private_key: |
-      vault:cloudsmart-cluster1/authservice:private_key
-    secret: vault:cloudsmart-cluster1/authservice:secret
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
