@@ -128,3 +128,6 @@ prow: {}
 userservice-mongodb:
   mongodbSystemLogVerbosity: 1
   usePassword: false
+gitprovider-sync-agent-mongodb:
+  mongodbSystemLogVerbosity: 1
+  usePassword: false
