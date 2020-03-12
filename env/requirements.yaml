@@ -7,7 +7,7 @@ dependencies:
   version: 0.0.50
 - name: agile-project-manager-frontend
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.31
+  version: 0.0.32
 - name: application-root
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.17
