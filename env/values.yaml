@@ -6,8 +6,10 @@ application-root:
   ingress:
     annotations:
       kubernetes.io/ingress.class: nginx
-      kubernetes.io/tls-acme: "false"
-    host: staging.ci.cloudsmart.io
+      kubernetes.io/tls-acme: "true"
+    host: jx-staging.ci.cloudsmart.io
+    tls:
+      secretname: tls-ci-cloudsmart-io-p
     paths:
     - backend:
         serviceName: agile-project-manager-frontend
