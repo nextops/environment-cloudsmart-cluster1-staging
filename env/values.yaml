@@ -120,7 +120,7 @@ expose:
     http: "false"
     tlsSecretName: tls-ci-cloudsmart-io-p
     tlsacme: "true"
-    urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
+    urltemplate: '{{.Namespace}}.{{.Domain}}'
   production: true
 jenkins:
   Servers:
