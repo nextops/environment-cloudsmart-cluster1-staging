@@ -53,4 +53,4 @@ dependencies:
   version: 0.0.4
 - name: userservice
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.31
+  version: 0.0.32
