@@ -48,6 +48,10 @@ application-root:
         servicePort: 80
       path: /(api)/(topics.*)
     - backend:
+        serviceName: notifications-service
+        servicePort: 80
+      path: /(api)/(notifications.*)
+    - backend:
         serviceName: application-root
         servicePort: 80
       path: /()(.*)
