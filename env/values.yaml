@@ -1,7 +1,4 @@
 PipelineSecrets: {}
-apm-mongodb:
-  mongodbSystemLogVerbosity: 1
-  usePassword: false
 application-root:
   ingress:
     annotations:
