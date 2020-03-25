@@ -132,13 +132,14 @@ notifications-service-mongodb:
   mongodbSystemLogVerbosity: 1
   usePassword: false
 prow: {}
-userservice-mongodb:
-  mongodbSystemLogVerbosity: 1
-  usePassword: false
 gitprovider-sync-agent-mongodb:
   mongodbSystemLogVerbosity: 1
   usePassword: false
 apm-mongodb-ha:
+  replicas: 3
+  auth:
+    enabled: false
+userservice-mongodb-ha:
   replicas: 3
   auth:
     enabled: false
