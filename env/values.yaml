@@ -126,9 +126,6 @@ jenkins:
   Servers:
     Global: {}
 prow: {}
-gitprovider-sync-agent-mongodb:
-  mongodbSystemLogVerbosity: 1
-  usePassword: false
 apm-mongodb-ha:
   replicas: 3
   auth:
@@ -142,6 +139,10 @@ comments-service-mongodb-ha:
   auth:
     enabled: false
 notifications-service-mongodb-ha:
+  replicas: 3
+  auth:
+    enabled: false
+gitprovider-sync-agent-mongodb-ha:
   replicas: 3
   auth:
     enabled: false
