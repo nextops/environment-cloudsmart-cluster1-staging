@@ -58,9 +58,6 @@ cleanup:
     helm.sh/hook-delete-policy: hook-succeeded
   Args:
   - --cleanup
-comments-service-mongodb:
-  mongodbSystemLogVerbosity: 1
-  usePassword: false
 dex:
   config:
     connectors:
@@ -140,6 +137,10 @@ apm-mongodb-ha:
   auth:
     enabled: false
 userservice-mongodb-ha:
+  replicas: 3
+  auth:
+    enabled: false
+comments-service-mongodb-ha:
   replicas: 3
   auth:
     enabled: false
