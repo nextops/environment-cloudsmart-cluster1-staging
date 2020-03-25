@@ -45,7 +45,7 @@ dependencies:
   version: 0.0.6
 - name: userservice
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.32
+  version: 0.0.33
 - alias: apm-mongodb-ha
   name: mongodb-replicaset
   repository: https://kubernetes-charts.storage.googleapis.com
