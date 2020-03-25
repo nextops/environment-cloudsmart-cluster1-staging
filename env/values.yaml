@@ -125,9 +125,6 @@ expose:
 jenkins:
   Servers:
     Global: {}
-notifications-service-mongodb:
-  mongodbSystemLogVerbosity: 1
-  usePassword: false
 prow: {}
 gitprovider-sync-agent-mongodb:
   mongodbSystemLogVerbosity: 1
@@ -141,6 +138,10 @@ userservice-mongodb-ha:
   auth:
     enabled: false
 comments-service-mongodb-ha:
+  replicas: 3
+  auth:
+    enabled: false
+notifications-service-mongodb-ha:
   replicas: 3
   auth:
     enabled: false

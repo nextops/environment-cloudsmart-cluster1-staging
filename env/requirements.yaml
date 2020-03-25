@@ -32,10 +32,6 @@ dependencies:
   name: mongodb
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 7.5.0
-- alias: notifications-service-mongodb
-  name: mongodb
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 7.5.0
 - name: notifications-service
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.6
@@ -51,6 +47,10 @@ dependencies:
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 3.14.0
 - alias: comments-service-mongodb-ha
+  name: mongodb-replicaset
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 3.14.0
+- alias: notifications-service-mongodb-ha
   name: mongodb-replicaset
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 3.14.0
