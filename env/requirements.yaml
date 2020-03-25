@@ -28,12 +28,10 @@ dependencies:
 - name: gitprovider-sync-agent
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.31
-- name: notifications-service
-  repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.7
-- name: userservice
-  repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.33
+- alias: gitprovider-sync-agent-mongodb-ha
+  name: mongodb-replicaset
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 3.14.0
 - alias: apm-mongodb-ha
   name: mongodb-replicaset
   repository: https://kubernetes-charts.storage.googleapis.com
@@ -50,7 +48,12 @@ dependencies:
   name: mongodb-replicaset
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 3.14.0
-- alias: gitprovider-sync-agent-mongodb-ha
-  name: mongodb-replicaset
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 3.14.0
+- name: notifications-service
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.7
+- name: notifications-service-frontend
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.2
+- name: userservice
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.33
