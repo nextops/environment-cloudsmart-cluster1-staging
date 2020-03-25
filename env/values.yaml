@@ -15,6 +15,10 @@ application-root:
         servicePort: 80
       path: /()(assets/apm.*)
     - backend:
+        serviceName: notifications-service-frontend
+        servicePort: 80
+      path: /()(assets/notifications.*)
+    - backend:
         serviceName: jx-dex
         servicePort: 32000
       path: /()(dex.*)
