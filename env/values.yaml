@@ -1,12 +1,14 @@
 PipelineSecrets: {}
+apm-mongodb-ha:
+  auth:
+    enabled: false
+  replicas: 3
 application-root:
   ingress:
     annotations:
       kubernetes.io/ingress.class: nginx
       kubernetes.io/tls-acme: "true"
     host: jx-staging.ci.cloudsmart.io
-    tls:
-      secretname: tls-ci-cloudsmart-io-p
     paths:
     - backend:
         serviceName: agile-project-manager-frontend
@@ -52,12 +54,18 @@ application-root:
         serviceName: application-root
         servicePort: 80
       path: /()(.*)
+    tls:
+      secretname: tls-ci-cloudsmart-io-p
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
   Args:
   - --cleanup
+comments-service-mongodb-ha:
+  auth:
+    enabled: false
+  replicas: 3
 dex:
   config:
     connectors:
@@ -120,29 +128,21 @@ expose:
     http: "false"
     tlsSecretName: tls-ci-cloudsmart-io-p
     tlsacme: "true"
-    urltemplate: '{{.Namespace}}.{{.Domain}}'
+    urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
+gitprovider-sync-agent-mongodb-ha:
+  auth:
+    enabled: false
+  replicas: 3
 jenkins:
   Servers:
     Global: {}
-prow: {}
-apm-mongodb-ha:
-  replicas: 3
-  auth:
-    enabled: false
-userservice-mongodb-ha:
-  replicas: 3
-  auth:
-    enabled: false
-comments-service-mongodb-ha:
-  replicas: 3
-  auth:
-    enabled: false
 notifications-service-mongodb-ha:
-  replicas: 3
   auth:
     enabled: false
-gitprovider-sync-agent-mongodb-ha:
   replicas: 3
+prow: {}
+userservice-mongodb-ha:
   auth:
     enabled: false
+  replicas: 3
