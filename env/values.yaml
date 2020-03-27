@@ -70,6 +70,12 @@ comments-service-mongodb-ha:
   auth:
     enabled: false
   replicas: 3
+authservice:
+  secret:
+    localhost_secret: "vault:cloudsmart-cluster1/authservice:localhost"
+  env:
+    DEV_CLIENT_ID: localhost
+    DEV_CLIENT_CALLBACK_URL: http://localhost:8400/auth/callback
 dex:
   config:
     connectors:
@@ -100,6 +106,11 @@ dex:
       redirectURIs:
       - https://jx-staging.ci.cloudsmart.io/auth/callback
       secret: vault:cloudsmart-cluster1/authservice:secret
+    - id: localhost
+      name: Localhost
+      redirectURIs:
+        - http://localhost:8400/auth/callback
+      secret: vault:cloudsmart-cluster1/authservice:localhost
     storage:
       config:
         inCluster: true
