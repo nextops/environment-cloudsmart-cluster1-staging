@@ -39,21 +39,41 @@ application-root:
         servicePort: 80
       path: /(api)/(sprints.*)
     - backend:
+        serviceName: agile-project-manager
+        servicePort: 80
+      path: /(docs/agile-project-manager)/(swagger.*)
+    - backend:
         serviceName: authservice
         servicePort: 80
       path: /(api)/(auth.*)
+    - backend:
+        serviceName: authservice
+        servicePort: 80
+      path: /(docs/authservice)/(swagger.*)
     - backend:
         serviceName: userservice
         servicePort: 80
       path: /(api)/(user.*)
     - backend:
+        serviceName: userservice
+        servicePort: 80
+      path: /(docs/userservice)/(swagger.*)
+    - backend:
         serviceName: comments-service
         servicePort: 80
       path: /(api)/(topics.*)
     - backend:
+        serviceName: comments-service
+        servicePort: 80
+      path: /(docs/comments-service)/(swagger.*)
+    - backend:
         serviceName: notifications-service
         servicePort: 80
       path: /(api)/(notifications.*)
+    - backend:
+        serviceName: notifications-service
+        servicePort: 80
+      path: /(docs/notifications-service)/(swagger.*)
     - backend:
         serviceName: application-root
         servicePort: 80
