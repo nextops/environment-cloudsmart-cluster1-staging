@@ -181,3 +181,5 @@ userservice-mongodb-ha:
   auth:
     enabled: false
   replicas: 3
+comments-service:
+  replicaCount: 3
