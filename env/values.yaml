@@ -183,3 +183,5 @@ userservice-mongodb-ha:
   replicas: 3
 comments-service:
   replicaCount: 3
+notifications-service:
+  replicaCount: 3
