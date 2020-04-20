@@ -185,3 +185,5 @@ comments-service:
   replicaCount: 3
 notifications-service:
   replicaCount: 3
+userservice:
+  replicaCount: 3
