@@ -187,3 +187,5 @@ notifications-service:
   replicaCount: 3
 userservice:
   replicaCount: 3
+gitprovider-sync-agent:
+  replicaCount: 3
