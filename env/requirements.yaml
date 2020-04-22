@@ -27,7 +27,7 @@ dependencies:
   version: 2.3.114
 - name: gitprovider-sync-agent
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.40
+  version: 0.0.41
 - alias: gitprovider-sync-agent-mongodb-ha
   name: mongodb-replicaset
   repository: https://kubernetes-charts.storage.googleapis.com
