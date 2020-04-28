@@ -191,3 +191,5 @@ gitprovider-sync-agent:
   replicaCount: 3
 agile-project-manager:
   replicaCount: 3
+authservice:
+  replicaCount: 3
