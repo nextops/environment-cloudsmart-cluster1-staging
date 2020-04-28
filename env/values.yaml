@@ -1,4 +1,6 @@
 PipelineSecrets: {}
+agile-project-manager:
+  replicaCount: 3
 apm-mongodb-ha:
   auth:
     enabled: false
@@ -80,22 +82,20 @@ application-root:
       path: /()(.*)
     tls:
       secretname: tls-ci-cloudsmart-io-p
+authservice:
+  replicaCount: 3
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
   Args:
   - --cleanup
+comments-service:
+  replicaCount: 3
 comments-service-mongodb-ha:
   auth:
     enabled: false
   replicas: 3
-authservice:
-  secret:
-    localhost_secret: "vault:cloudsmart-cluster1/authservice:localhost"
-  env:
-    DEV_CLIENT_ID: localhost
-    DEV_CLIENT_CALLBACK_URL: http://localhost:8400/auth/callback
 dex:
   config:
     connectors:
@@ -129,7 +129,7 @@ dex:
     - id: localhost
       name: Localhost
       redirectURIs:
-        - http://localhost:8400/auth/callback
+      - http://localhost:8400/auth/callback
       secret: vault:cloudsmart-cluster1/authservice:localhost
     storage:
       config:
@@ -165,6 +165,8 @@ expose:
     tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
   production: true
+gitprovider-sync-agent:
+  replicaCount: 3
 gitprovider-sync-agent-mongodb-ha:
   auth:
     enabled: false
@@ -172,24 +174,16 @@ gitprovider-sync-agent-mongodb-ha:
 jenkins:
   Servers:
     Global: {}
+notifications-service:
+  replicaCount: 3
 notifications-service-mongodb-ha:
   auth:
     enabled: false
   replicas: 3
 prow: {}
+userservice:
+  replicaCount: 3
 userservice-mongodb-ha:
   auth:
     enabled: false
   replicas: 3
-comments-service:
-  replicaCount: 3
-notifications-service:
-  replicaCount: 3
-userservice:
-  replicaCount: 3
-gitprovider-sync-agent:
-  replicaCount: 3
-agile-project-manager:
-  replicaCount: 3
-authservice:
-  replicaCount: 3
