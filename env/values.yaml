@@ -84,6 +84,11 @@ application-root:
       secretname: tls-ci-cloudsmart-io-p
 authservice:
   replicaCount: 3
+  secret:
+    localhost_secret: "vault:cloudsmart-cluster1/authservice:localhost"
+  env:
+    DEV_CLIENT_ID: localhost
+    DEV_CLIENT_CALLBACK_URL: http://localhost:8400/auth/callback
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
@@ -152,7 +157,7 @@ dex:
       containerPort: 5556
       nodePort: 32000
       servicePort: 32000
-  replicas: 1
+  replicas: 3
   service:
     annotations: {}
     type: ClusterIP
