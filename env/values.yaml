@@ -152,7 +152,7 @@ dex:
       containerPort: 5556
       nodePort: 32000
       servicePort: 32000
-  replicas: 1
+  replicas: 3
   service:
     annotations: {}
     type: ClusterIP
