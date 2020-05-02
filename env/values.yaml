@@ -83,12 +83,12 @@ application-root:
     tls:
       secretname: tls-ci-cloudsmart-io-p
 authservice:
+  env:
+    DEV_CLIENT_CALLBACK_URL: http://localhost:8400/auth/callback
+    DEV_CLIENT_ID: localhost
   replicaCount: 3
   secret:
-    localhost_secret: "vault:cloudsmart-cluster1/authservice:localhost"
-  env:
-    DEV_CLIENT_ID: localhost
-    DEV_CLIENT_CALLBACK_URL: http://localhost:8400/auth/callback
+    localhost_secret: vault:cloudsmart-cluster1/authservice:localhost
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
