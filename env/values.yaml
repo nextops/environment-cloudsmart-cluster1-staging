@@ -21,6 +21,10 @@ application-root:
         servicePort: 80
       path: /()(assets/notifications.*)
     - backend:
+        serviceName: comments-service-frontend
+        servicePort: 80
+      path: /()(assets/comments.*)
+    - backend:
         serviceName: jx-dex
         servicePort: 32000
       path: /()(dex.*)
