@@ -17,6 +17,9 @@ dependencies:
 - name: comments-service
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.49
+- name: comments-service-frontend
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.2
 - alias: dex
   name: dex
   repository: https://kubernetes-charts.storage.googleapis.com
@@ -28,10 +31,6 @@ dependencies:
 - name: gitprovider-sync-agent
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.45
-- alias: gitprovider-sync-agent-mongodb-ha
-  name: mongodb-replicaset
-  repository: https://kubernetes-charts.storage.googleapis.com
-  version: 3.14.0
 - alias: apm-mongodb-ha
   name: mongodb-replicaset
   repository: https://kubernetes-charts.storage.googleapis.com
@@ -45,6 +44,10 @@ dependencies:
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 3.14.0
 - alias: notifications-service-mongodb-ha
+  name: mongodb-replicaset
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 3.14.0
+- alias: gitprovider-sync-agent-mongodb-ha
   name: mongodb-replicaset
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 3.14.0
