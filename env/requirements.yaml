@@ -19,7 +19,7 @@ dependencies:
   version: 0.0.51
 - name: comments-service-frontend
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.3
+  version: 0.0.4
 - alias: dex
   name: dex
   repository: https://kubernetes-charts.storage.googleapis.com
