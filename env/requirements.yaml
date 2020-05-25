@@ -4,7 +4,7 @@ dependencies:
   version: 0.0.61
 - name: agile-project-manager-composite
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.131
+  version: 0.0.132
 - name: agile-project-manager-frontend
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.85
