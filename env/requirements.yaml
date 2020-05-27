@@ -53,7 +53,7 @@ dependencies:
   version: 3.14.0
 - name: notifications-service
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.12
+  version: 0.0.13
 - name: notifications-service-frontend
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.4
