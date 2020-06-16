@@ -83,11 +83,7 @@ application-root:
     - backend:
         serviceName: ui-sync-service
         servicePort: 80
-      path: /(api/(channel-auth.*)
-    - backend:
-        serviceName: ui-sync-service
-        servicePort: 80
-      path: /(api/(trainer.*)
+      path: /(api/(channels.*)
     - backend:
         serviceName: ui-sync-service
         servicePort: 80
