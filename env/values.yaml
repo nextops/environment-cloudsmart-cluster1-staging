@@ -83,7 +83,7 @@ application-root:
     - backend:
         serviceName: ui-sync-service
         servicePort: 80
-      path: /(api/(channels.*)
+      path: /(api)/(channels.*)
     - backend:
         serviceName: ui-sync-service
         servicePort: 80
