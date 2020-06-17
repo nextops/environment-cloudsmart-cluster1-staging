@@ -16,7 +16,7 @@ dependencies:
   version: 0.0.17
 - name: comments-service
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.54
+  version: 0.0.55
 - name: comments-service-frontend
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.6
