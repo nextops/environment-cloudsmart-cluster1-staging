@@ -56,7 +56,7 @@ dependencies:
   version: 0.0.20
 - name: notifications-service-frontend
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.12
+  version: 0.0.13
 - name: ui-sync-service
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.7
